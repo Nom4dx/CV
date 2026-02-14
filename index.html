@@ -1,634 +1,493 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nomad Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Nomad</title>
 
-    <link rel="icon" type="image/x-icon" href="img/profile.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style/style.css">
+  <link rel="icon" type="image/x-icon" href="img/profile.png">
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="fas fa-shield-alt"></i> Nomad Portfolio
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#experience">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#competitions">Competitions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#certifications">Certifications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="spinner" aria-hidden="true"></div>
+  </div>
+
+  <div class="wrap" id="app" aria-hidden="true">
+    <header class="hero reveal">
+      <h1>Nomad</h1>
+      <p class="subtitle">Cybersecurity · Reverse Engineering · Endpoint Security · Web/PWA Testing · OSINT Forensics</p>
+      <div class="hero-links">
+        <a class="btn" href="#contact">Contact me</a>
+        <a class="btn ghost" href="#experience">View experience</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="about" class="card reveal">
+        <h2>Profile</h2>
+        <p class="section-note">5 years in cybersecurity · last 2 focused on forensics, reverse engineering and OSINT</p>
+        <div class="profile-grid">
+          <div class="profile-main">
+            <p class="lead">
+              I like taking systems apart, spotting the weak points, and turning them into concrete,
+              practical fixes. I test, learn, and document along the way.
+            </p>
+            <p>
+              I have 5 years of hands-on cybersecurity experience, with the last 2 focused on OSINT
+              forensics and reverse engineering. I have worked in company environments and I specialize
+              in software pentesting, with a strong CTF-driven mindset. I am specialized in endpoint
+              security and testing web applications and PWAs.
+            </p>
+            <p>
+              CTF competitions pulled me into this world. In September 2025 I founded RootRunners, now
+              one of the top teams in Italy with professionals from around the world.
+            </p>
+            <div class="chips profile-tags">
+              <span>Reverse engineering</span>
+              <span>Software pentesting</span>
+              <span>CTF team lead</span>
+              <span>OSINT forensics</span>
             </div>
+          </div>
+          <div class="profile-box">
+            <h3>Focus areas</h3>
+            <ul class="simple-list">
+              <li>Reverse engineering and binary analysis.</li>
+              <li>Endpoint security and web/PWA testing.</li>
+              <li>Software pentesting and misc challenges.</li>
+              <li>OSINT case work and evidence triage.</li>
+            </ul>
+          </div>
         </div>
-    </nav>
+      </section>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h1 class="display-4 fw-bold">Ethical Hacker & Security Specialist</h1>
-                    <p class="lead">Protecting digital assets through expertise in cybersecurity and ethical hacking</p>
-                    <div class="d-flex justify-content-center gap-3 mt-4">
-                        <a href="#contact" class="btn btn-primary">Contact Me</a>
-                        <a href="#about" class="btn btn-outline-light">Learn More</a>
-                    </div>
-                </div>
-            </div>
+      <section id="skills" class="card reveal">
+        <h2>Skills</h2>
+        <p class="section-note">A quick snapshot of my current focus areas.</p>
+
+        <div class="radar" data-values="70,75,30,90,30" data-labels="Web|Reverse|Pwn|Misc|Crypto">
+          <svg class="radar-chart" viewBox="0 0 260 260" role="img" aria-label="Skill radar chart"></svg>
+          <div class="radar-legend">
+            <span>Web — 70%</span>
+            <span>Reverse — 75%</span>
+            <span>Pwn — 30%</span>
+            <span>Misc — 90%</span>
+            <span>Crypto — 30%</span>
+          </div>
         </div>
-        <div class="hero-overlay"></div>
-    </section>
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>About Me</h2>
-                <div class="section-divider"></div>
-                <p>My expertise and approach as an ethical hacker</p>
+
+        <div class="chip-grid">
+          <div class="chip-group">
+            <h3>Platforms & operating systems</h3>
+            <div class="chips">
+              <span>Windows Server/Desktop</span>
+              <span>Linux (Ubuntu, Mint, Debian)</span>
+              <span>Kali</span>
+              <span>Tails</span>
+              <span>Parrot OS</span>
+              <span>BlackArch</span>
             </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="content-card">
-                        <h3>Who I Am</h3>
-                        <p>I am a dedicated cybersecurity professional specializing in ethical hacking and security analysis. With extensive experience in network security, penetration testing, and vulnerability assessment, I help organizations strengthen their security posture against potential threats.</p>
-                        <p>My approach combines technical expertise with a deep understanding of attacker methodologies to provide comprehensive security solutions.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="content-card">
-                        <h3>My Approach</h3>
-                        <ul class="feature-list">
-                            <li><i class="fas fa-search"></i> Thorough vulnerability assessment and penetration testing</li>
-                            <li><i class="fas fa-shield-alt"></i> Proactive security hardening and risk mitigation</li>
-                            <li><i class="fas fa-code"></i> Secure coding practices and application security</li>
-                            <li><i class="fas fa-network-wired"></i> Network security architecture and implementation</li>
-                            <li><i class="fas fa-user-shield"></i> Security awareness training and team development</li>
-                        </ul>
-                    </div>
-                </div>
+          </div>
+          <div class="chip-group">
+            <h3>Programming languages</h3>
+            <div class="chips">
+              <span>C#</span>
+              <span>PHP</span>
+              <span>Python</span>
+              <span>JavaScript/Node.js</span>
+              <span>HTML/CSS</span>
+              <span>SQL</span>
+              <span>Bash</span>
             </div>
+          </div>
+          <div class="chip-group">
+            <h3>Security practice areas</h3>
+            <div class="chips">
+              <span>Network scanning & enumeration</span>
+              <span>Web application testing</span>
+              <span>Exploitation frameworks</span>
+              <span>Vulnerability assessment</span>
+              <span>Wireless security</span>
+              <span>Password auditing</span>
+              <span>Reverse engineering toolchain</span>
+              <span>Malware analysis</span>
+              <span>Traffic inspection</span>
+            </div>
+          </div>
+          <div class="chip-group">
+            <h3>OSINT & forensics</h3>
+            <div class="chips">
+              <span>OSINT collection & enrichment</span>
+              <span>Identity correlation</span>
+              <span>Threat intelligence research</span>
+              <span>Email & domain recon</span>
+              <span>Infrastructure footprinting</span>
+              <span>Social engineering workflows</span>
+              <span>Network forensics</span>
+              <span>Evidence triage</span>
+            </div>
+          </div>
+          <div class="chip-group">
+            <h3>Engineering stack</h3>
+            <div class="chips">
+              <span>Backend development</span>
+              <span>Databases</span>
+              <span>Containers & virtualization</span>
+              <span>Automation & scripting</span>
+              <span>Version control</span>
+              <span>Web interfaces</span>
+            </div>
+          </div>
+          <div class="chip-group">
+            <h3>Professional skills</h3>
+            <div class="chips">
+              <span>Team management</span>
+              <span>Leadership</span>
+              <span>Communication</span>
+              <span>Problem solving</span>
+              <span>Work ethic</span>
+              <span>Time management</span>
+              <span>Critical thinking</span>
+              <span>Adaptability</span>
+              <span>Documentation</span>
+              <span>Mentoring</span>
+            </div>
+          </div>
         </div>
-    </section>
-    <!-- Skills Section -->
-    <section id="skills" class="section section-dark">
-        <div class="container">
-            <div class="section-header">
-                <h2>Technical Skills</h2>
-                <div class="section-divider"></div>
-                <p>My expertise in cybersecurity and ethical hacking</p>
+      </section>
+
+      <section id="experience" class="card reveal">
+        <h2>Experience</h2>
+        <div class="exp-list">
+
+          <article class="exp-item">
+            <div class="exp-head">
+              <div>
+                <h3>Founder</h3>
+                <p>RootRunners</p>
+              </div>
+              <span>Sep 2025 - Current</span>
             </div>
-            
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-terminal"></i>
-                        </div>
-                        <h3>Operating Systems</h3>
-                        <ul>
-                            <li>Windows Server/Desktop</li>
-                            <li>Linux (Ubuntu, Linux Mint)</li>
-                            <li>Kali Linux</li>
-                            <li>Debian</li>
-                            <li>Tails</li>
-                            <li>Parrot OS</li>
-                            <li>BlackArch</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3>Programming Languages</h3>
-                        <ul>
-                            <li>C#</li>
-                            <li>PHP</li>
-                            <li>Python</li>
-                            <li>JavaScript/Node.js</li>
-                            <li>HTML/CSS</li>
-                            <li>SQL</li>
-                            <li>Bash Scripting</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Most Used Security Tools</h3>
-                        <ul>
-                            <li>Nmap</li>
-                            <li>Sqlmap</li>
-                            <li>Wireshark</li>
-                            <li>Burp Suite Pro</li>
-                            <li>Metasploit Framework</li>
-                            <li>Nessus</li>
-                            <li>Ghidra</li>
-                            <li>IDA</li>
-                            <li>Binary Ninja</li>
-                            <li>Aircrack-ng</li>
-                            <li>John the Ripper</li>
-                            <li>Hydra</li>
-                            <li>Nikto</li>
-                            <li>OWASP ZAP</li>
-                            <li>BeEF</li>
-                            <li>Maltego</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <h3>Intelligence & Analysis</h3>
-                        <ul>
-                            <li>OSINT Techniques</li>
-                            <li>Maltego</li>
-                            <li>Shodan</li>
-                            <li>Ettercap</li>
-                            <li>Hashcat</li>
-                            <li>TheHarvester</li>
-                            <li>Recon-ng</li>
-                            <li>SpiderFoot</li>
-                            <li>Sherlock Project</li>
-                            <li>Social Engineering Tools</li>
-                            <li>Network Traffic Analysis</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3>Frameworks & Technologies</h3>
-                        <ul>
-                            <li>Bootstrap</li>
-                            <li>.NET Framework</li>
-                            <li>Ajax</li>
-                            <li>MongoDB</li>
-                            <li>MySQL</li>
-                            <li>Docker</li>
-                            <li>Git</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3>Soft Skills</h3>
-                        <ul>
-                            <li>Team Management</li>
-                            <li>Project Leadership</li>
-                            <li>Communication Skills</li>
-                            <li>Problem Solving</li>
-                            <li>Work Ethic</li>
-                            <li>Time Management</li>
-                            <li>Critical Thinking</li>
-                            <li>Adaptability</li>
-                            <li>Documentation</li>
-                            <li>Training & Mentoring</li>
-                        </ul>
-                    </div>
-                </div>
+            <p> 
+                RootRunners is a competitive CTF team founded in Italy, open worldwide. We focus on crypto, pwn, reverse, web, forensics, OSINT, 
+                and misc. We push skills through teamwork, shared knowledge, and real problem-solving. 
+                Curiosity, precision, and constant improvement drive everything we do.
+            </p>
+            <div class="chips">
+              <span>Team management</span>
+              <span>CTF</span>
+              <span>Problem-solving</span>
             </div>
+          </article>
+
+          <article class="exp-item">
+            <div class="exp-head">
+              <div>
+                <h3>Pentester</h3>
+                <p>Reengineering S.R.L</p>
+              </div>
+              <span>Aug 2024 - May 2025</span>
+            </div>
+            <p>
+              Software security assessments, penetration testing, and technical reports to improve
+              the company security posture.
+            </p>
+            <div class="chips">
+              <span>Security testing</span>
+              <span>Red team</span>
+              <span>Penetration testing</span>
+            </div>
+          </article>
+
+          <article class="exp-item">
+            <div class="exp-head">
+              <div>
+                <h3>Volunteer</h3>
+                <p>Trace Labs</p>
+              </div>
+              <span>May 2024 - Jun 2024</span>
+            </div>
+            <p>
+              OSINT work for missing persons cases, with open source collection and analysis
+              supported by AI tooling.
+            </p>
+            <div class="chips">
+              <span>OSINT</span>
+              <span>Intelligence analysis</span>
+              <span>Profiling</span>
+            </div>
+          </article>
+
+          <article class="exp-item">
+            <div class="exp-head">
+              <div>
+                <h3>Manager</h3>
+                <p>Horagon Network</p>
+              </div>
+              <span>Jul 2023 - Oct 2023</span>
+            </div>
+            <p>
+              Security and server management, team coordination, hiring, and software development
+              in a startup with 19,000 subscribers.
+            </p>
+            <div class="chips">
+              <span>Security management</span>
+              <span>Server administration</span>
+              <span>Team leadership</span>
+              <span>Software development</span>
+            </div>
+          </article>
+
+          <article class="exp-item">
+            <div class="exp-head">
+              <div>
+                <h3>Security Analyzer</h3>
+                <p>AzureMC Network</p>
+              </div>
+              <span>Apr 2022 - Jul 2023</span>
+            </div>
+            <p>
+              Internal and external network security, application security, staff training,
+              and support for hiring processes.
+            </p>
+            <div class="chips">
+              <span>Network security</span>
+              <span>Web application security</span>
+              <span>Training</span>
+              <span>People management</span>
+            </div>
+          </article>
         </div>
-    </section>
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Work Experience</h2>
-                <div class="section-divider"></div>
-                <p>My professional journey in cybersecurity</p>
-            </div>
-                        
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="content-card">
-                            <h3>Pentester</h3>
-                            <h4>Reengineering S.R.L</h4>
-                            <p class="timeline-date">Aug 2024 - May 2025</p>
-                            <p>I work as a Security Analyzer at Reengineering S.R.L, focusing on web application  and software security. I conduct red team penetration testing and security assessments to improve the company's software security posture.</p>
-                            <div class="tags">
-                                <span class="tag">Security Testing</span>
-                                <span class="tag">Red Team</span>
-                                <span class="tag">Penetration Testing</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      </section>
 
-                
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="content-card">
-                            <h3>Volunteer</h3>
-                            <h4>Trace Labs</h4>
-                            <p class="timeline-date">May 2024 - Jun 2024</p>
-                            <p>I joined Trace Labs, a volunteer project connecting professionals globally. We utilize artificial intelligence and OSINT (Open Source Intelligence) to locate missing people.</p>
-                            <div class="tags">
-                                <span class="tag">OSINT</span>
-                                <span class="tag">Intelligence Analysis</span>
-                                <span class="tag">Profiling</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="content-card">
-                            <h3>Manager</h3>
-                            <h4>Horagon Network</h4>
-                            <p class="timeline-date">Jul 2023 - Oct 2023</p>
-                            <p>Initially worked as a Security Manager and later as a Manager at Horagon Network startup. Responsibilities included server management, security, staff management, hiring, and active development of company software. The company had 19,000 subscribers.</p>
-                            <div class="tags">
-                                <span class="tag">Security Management</span>
-                                <span class="tag">Server Administration</span>
-                                <span class="tag">Team Leadership</span>
-                                <span class="tag">Software Development</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="content-card">
-                            <h3>Security Analyzer</h3>
-                            <h4>AzureMC Network</h4>
-                            <p class="timeline-date">Apr 2022 - Jul 2023</p>
-                            <p>Worked as a Security Manager managing internal and external network security, with a focus on server and web application security. Handled personnel management, hiring processes, and conducted staff training within the network.</p>
-                            <div class="tags">
-                                <span class="tag">Network Security</span>
-                                <span class="tag">Web Application Security</span>
-                                <span class="tag">Personnel Management</span>
-                                <span class="tag">Training</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <section id="competitions" class="card reveal">
+        <h2>Competitions</h2>
+        <div class="list">
+
+          <article class="mini">
+            <div class="thumb">
+              <img src="img/olicyber.png" alt="Olicyber logo">
             </div>
+            <h3>Olicyber 2025 Finals</h3>
+            <p>Qualified for national finals after placing top 50 of 466.</p>
+            <div class="chips">
+              <span>Individual</span>
+              <span>CTF</span>
+              <span>Cybersecurity</span>
+            </div>
+          </article>
+
+          <article class="mini">
+            <div class="thumb">
+              <img src="img/olicyber.png" alt="Olicyber logo">
+            </div>
+            <h3>Olicyber 2025 Territorial Selection</h3>
+            <p>Top 50 of 466 in the regional phase.</p>
+            <div class="chips">
+              <span>Individual</span>
+              <span>CTF</span>
+              <span>Problem solving</span>
+            </div>
+          </article>
+
+          <article class="mini">
+            <div class="thumb">
+              <img src="img/olicyber.png" alt="Olicyber logo">
+            </div>
+            <h3>Olicyber 2025 Cybercamp</h3>
+            <p>Advanced training camp, 4th place in internal competition.</p>
+            <div class="chips">
+              <span>Individual</span>
+              <span>Training</span>
+              <span>CTF</span>
+            </div>
+          </article>
+
+          <article class="mini">
+            <div class="thumb">
+              <img src="img/olicyber.png" alt="Olicyber logo">
+            </div>
+            <h3>Olicyber 2023 Competition</h3>
+            <p>2nd place in the regional phase.</p>
+            <div class="chips">
+              <span>Individual</span>
+              <span>CTF</span>
+            </div>
+          </article>
         </div>
-    </section>
+      </section>
 
-    <!-- Projects Section -->
-    <section id="competitions" class="section section-dark">
-        <div class="container">
-            <div class="section-header">
-                <h2>Competitions</h2>
-                <div class="section-divider"></div>
-                <p>Showcasing my competitions in cybersecurity</p>
+      <section id="team" class="card reveal">
+        <h2>RootRunners Team</h2>
+        <p class="section-note">A CTF team born in Italy, open to members worldwide.</p>
+        <div class="profile-grid">
+          <div class="profile-main">
+            <p class="lead">
+              RootRunners started as a small personal initiative and is now growing into a real team,
+              steadily carving out its place in the Italian CTF scene. We keep improving through
+              consistent participation, shared learning, and a strong team mindset.
+            </p>
+            <div class="chips profile-tags">
+              <span>Founded in Italy</span>
+              <span>Open worldwide</span>
+              <span>CTF competitions</span>
+              <span>Team growth</span>
             </div>
-
-            <div class="row">
-
-                <!-- Buckeye CTF -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://ctftime.org/media/cache/74/bf/74bfbafae9a47ef6aae09d54bb195e03.png" alt="Security Training">
-                        </div>
-                        <div class="project-content">
-                            <h3>BuckeyeCTF 2025</h3>
-                            <p>BuckeyeCTF 2025 is a 48-hour online Jeopardy CTF, organized by Buckeye Bureau of BOF. And we managed to place 128 out of 716 teams.</p>
-                            <div class="tags">
-                                <span class="tag">Team</span>
-                                <span class="tag">RootRunners</span>
-                                <span class="tag">Cybersecurity</span>
-                                <span class="tag">Jeopardy</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- m0leCon CTF -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://ctftime.org/media/cache/36/93/36932effefc50dda566f55c99e7648c1.png" alt="Security Training">
-                        </div>
-                        <div class="project-content">
-                            <h3>m0leCon CTF 2026 Teaser</h3>
-                            <p>m0leCon CTF 2026 Teaser is a 24-hour online Jeopardy CTF, organized by pwnthem0le. And we managed to place 94 out of 638 teams.</p>
-                            <div class="tags">
-                                <span class="tag">Team</span>
-                                <span class="tag">RootRunners</span>
-                                <span class="tag">Cybersecurity</span>
-                                <span class="tag">Jeopardy</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Hack.lu CTF -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://ctftime.org/media/cache/bb/fb/bbfb34e2aa986842fd2753e98ae5aaa6.png" alt="Security Training">
-                        </div>
-                        <div class="project-content">
-                            <h3>Hack.lu CTF 2025</h3>
-                            <p>Hack.lu CTF 2026 is a 48-hour online Jeopardy CTF, organized by FluxFingers, the CTF team of Ruhr-University Bochum (Germany). And we managed to place 132 out of 299 teams.</p>
-                            <div class="tags">
-                                <span class="tag">Team</span>
-                                <span class="tag">RootRunners</span>
-                                <span class="tag">Cybersecurity</span>
-                                <span class="tag">Jeopardy</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- K17 CTF -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="img/K17ctf.png" alt="Security Training">
-                        </div>
-                        <div class="project-content">
-                            <h3>K17 CTF</h3>
-                            <p>K17 CTF is a 48-hour online Jeopardy CTF with a mix of beginner-friendly and hard challenges, hosted by UNSW's Security Society. And we managed to place 144 out of 972 teams.</p>
-                            <div class="tags">
-                                <span class="tag">Team</span>
-                                <span class="tag">RootRunners</span>
-                                <span class="tag">Cybersecurity</span>
-                                <span class="tag">Jeopardy</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 07 CTF -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="img/07ctf.png" alt="Security Training">
-                        </div>
-                        <div class="project-content">
-                            <h3>07CTF</h3>
-                            <p>07CTF is a 36-hour Capture The Flag competition organized by team 0bscuri7y. The event features challenges across a variety of categories, including web, crypto, forensics, OSINT, misc, and reverse engineering. And we managed to place 29 out of 200 teams.</p>
-                            <div class="tags">
-                                <span class="tag">Team</span>
-                                <span class="tag">RootRunners</span>
-                                <span class="tag">Cybersecurity</span>
-                                <span class="tag">Jeopardy</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2025 National Competition -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="img/olicyber.png" alt="Security Training">
-                        </div>
-                        <div class="project-content">
-                            <h3>Olicyber 2025 Finals</h3>
-                            <p>I qualified for the national finals of OliCyber 2025 — an exclusive stage reserved for the top competitors from each region — after placing in the top 50 out of 466 in the territorial round. This achievement reflects strong technical proficiency in cybersecurity, a competitive mindset, and effective problem-solving under time pressure.</p>
-                            <div class="tags">
-                                <span class="tag">Individual</span>
-                                <span class="tag">CTF</span>
-                                <span class="tag">Cybersecurity</span>
-                                <span class="tag">Problem Solving</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2025 Territorial Selection -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="img/olicyber.png" alt="Security Training">
-                        </div>
-                        <div class="project-content">
-                            <h3>Olicyber 2025 territorial selection</h3>
-                            <p>Achieved placement in the top 50 out of 466 participants in the territorial phase of OliCyber 2025, demonstrating strong skills in cybersecurity challenges and problem-solving.</p>
-                            <div class="tags">
-                                <span class="tag">Individual</span>
-                                <span class="tag">CTF</span>
-                                <span class="tag">Cybersecurity</span>
-                                <span class="tag">Problem Solving</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 2025 Cybercamp -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="img/olicyber.png" alt="Olicyber Cybercamp">
-                        </div>
-                        <div class="project-content">
-                            <h3>Olicyber 2025 Cybercamp</h3>
-                            <p>Participated in advanced cybersecurity training camps, gaining hands-on experience with advanced attack techniques. Achieved 4th place in the internal unofficial competition.</p>
-                            <div class="tags">
-                                <span class="tag">Individual</span>
-                                <span class="tag">CTF</span>
-                                <span class="tag">Training</span>
-                                <span class="tag">Advanced Attacks</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 2023 Competition -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="img/olicyber.png" alt="CTF Competition">
-                        </div>
-                        <div class="project-content">
-                            <h3>Olicyber 2023 competition</h3>
-                            <p>Achieved 2nd place in the regional phase of OliCyber 2023, the Italian national cybersecurity competition for high school students</p>
-                            <div class="tags">
-                                <span class="tag">Individual</span>
-                                <span class="tag">CTF</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <div class="profile-box">
+            <h3>Team links</h3>
+            <ul class="simple-list">
+              <li>
+                Website:
+                <a href="https://rootrunners.dev/" target="_blank" rel="noreferrer">rootrunners.dev</a>
+              </li>
+              <li>
+                Email:
+                <a href="mailto:ctf.rootrunners@gmail.com">ctf.rootrunners@gmail.com</a>
+              </li>
+              <li>
+                Twitter/X:
+                <a href="https://x.com/runners87645" target="_blank" rel="noreferrer">@runners87645</a>
+              </li>
+              <li>
+                Discord:
+                <a href="https://dsc.gg/rootrunners" target="_blank" rel="noreferrer">dsc.gg/rootrunners</a>
+              </li>
+              <li>
+                GitHub:
+                <a href="https://github.com/RootRunners" target="_blank" rel="noreferrer">github.com/RootRunners</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Certifications & Badges</h2>
-                <div class="section-divider"></div>
-                <p>Professional qualifications and achievements</p>
-                <a href="https://www.credly.com/users/n_cv" class="btn btn-verify">Check skills</a>
+      <section id="certifications" class="card reveal">
+        <h2>Certifications</h2>
+        <p class="section-note">Verified badges and course completions.</p>
+        <div class="exp-list">
+          <article class="exp-item">
+            <div class="exp-head">
+              <div>
+                <h3>CISCO Ethical Hacker</h3>
+                <p>Cisco</p>
+              </div>
+              <span>October 2024</span>
             </div>
-            <div class="row">
-                <div class="col-lg-6 col-md-12 mb-4">
-                    <div class="content-card">
-                        <div class="cert-icon">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <h3>CISCO Ethical Hacker</h3>
-                        <p class="cert-date">October 2024</p>
-                        <p>Cisco verifies the earner of this badge successfully completed the Ethical Hacker course. The holder of this student level credential has a broad understanding of the legal and compliance requirements and is proficient in the art of scoping, executing, reporting vulnerability assessments, and recommending mitigation strategies. The holder has completed up to 34 hands-on activities using Kali Linux, WebSploit, and other tools.</p>
-                    </div>
-                </div>
+            <p>
+              Cisco verifies the earner of this badge successfully completed the Ethical Hacker course.
+              The holder of this student level credential has a broad understanding of the legal and
+              compliance requirements and is proficient in the art of scoping, executing, reporting
+              vulnerability assessments, and recommending mitigation strategies. The holder has completed
+              up to 34 hands-on activities using Kali Linux, WebSploit, and other tools.
+            </p>
+          </article>
 
-                <div class="col-lg-6 col-md-12 mb-4">
-                    <div class="content-card">
-                        <div class="cert-icon">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <h3>CISCO Python Essentials 1</h3>
-                        <p class="cert-date">October 2024</p>
-                        <p>Cisco, in collaboration with OpenEDG Python Institute, verifies the earner of this badge successfully completed the Python Essentials 1 course and achieved the student level credentials. Earners have knowledge of the concepts of computer programming, the syntax and semantics of the Python language as well as demonstrate the ability to accomplish coding tasks related to the essentials of programming in the Python language and resolve implementation challenges using the Python Standard Library.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-12 mb-4">
-                    <div class="content-card">
-                        <div class="cert-icon">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <h3>CISCO Networking Basics</h3>
-                        <p class="cert-date">January 2025</p>
-                        <p>Cisco verifies the earner of this badge successfully completed the Networking Basics course and achieved this student level credential. Earner has knowledge of the types of networks, how they work, how devices send and receive data, the types of network cabling, how IP addresses find information on the Internet, how transport and applications operate, and has practiced building a home wireless network. Participated in up to 13 Cisco Packet Tracer activities.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-12 mb-4">
-                    <div class="content-card">
-                        <div class="cert-icon">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <h3>Networking Academy Learn-A-Thon 2023</h3>
-                        <p class="cert-date">October 2023</p>
-                        <p>This badge is awarded to students and instructors who participated in a Learn-A-Thon event organized by a local Networking Academy.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-12 mb-4">
-                    <div class="content-card">
-                        <div class="cert-icon">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <h3>CISCO Introduction to Cybersecurity</h3>
-                        <p class="cert-date">October 2023</p>
-                        <p>Cisco verifies the earner of this badge successfully completed the Introduction to Cybersecurity course. The holder of this student-level credential has introductory knowledge of cybersecurity, including the global implications of cyber threats on industries, and why cybersecurity is a growing profession. They understand vulnerabilities and threat detection and defense. They also have insight into opportunities available with pursuing cybersecurity certifications.</p>
-                    </div>
-                </div>
+          <article class="exp-item">
+            <div class="exp-head">
+              <div>
+                <h3>CISCO Python Essentials 1</h3>
+                <p>Cisco + OpenEDG Python Institute</p>
+              </div>
+              <span>October 2024</span>
             </div>
-        </div> 
-        
-    </section>
-    <!-- Contact Section -->
-    <section id="contact" class="section section-dark">
-        <div class="container">
-            <div class="section-header">
-                <h2>Contact Me</h2>
-                <div class="section-divider"></div>
-                <p>Get in touch for security consultations</p>
+            <p>
+              Cisco, in collaboration with OpenEDG Python Institute, verifies the earner of this badge
+              successfully completed the Python Essentials 1 course and achieved the student level
+              credentials. Earners have knowledge of the concepts of computer programming, the syntax and
+              semantics of the Python language as well as demonstrate the ability to accomplish coding
+              tasks related to the essentials of programming in the Python language and resolve
+              implementation challenges using the Python Standard Library.
+            </p>
+          </article>
+
+          <article class="exp-item">
+            <div class="exp-head">
+              <div>
+                <h3>CISCO Networking Basics</h3>
+                <p>Cisco</p>
+              </div>
+              <span>January 2025</span>
             </div>
-            
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="content-card">
-                        <h3>Let's Connect</h3>
-                        <p>I'm available for security consultations, penetration testing, and security training. Feel free to reach out to discuss how I can help secure your digital assets.</p>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <span>mail.forward.staff@gmail.com</span>
-                            </div>
-                        </div>
-                        <div class="social-links">
-                            <a href="https://github.com/Nom4dx" class="social-link"><i class="fab fa-github"></i></a>
-                            <a href="https://ctftime.org/team/406718" class="social-link"><i class="fas fa-flag"></i></a>
-                        </div>
-                    </div>
-                </div>   
+            <p>
+              Cisco verifies the earner of this badge successfully completed the Networking Basics course
+              and achieved this student level credential. Earner has knowledge of the types of networks,
+              how they work, how devices send and receive data, the types of network cabling, how IP
+              addresses find information on the Internet, how transport and applications operate, and has
+              practiced building a home wireless network. Participated in up to 13 Cisco Packet Tracer
+              activities.
+            </p>
+          </article>
+
+          <article class="exp-item">
+            <div class="exp-head">
+              <div>
+                <h3>Networking Academy Learn-A-Thon 2023</h3>
+                <p>Networking Academy</p>
+              </div>
+              <span>October 2023</span>
             </div>
+            <p>
+              This badge is awarded to students and instructors who participated in a Learn-A-Thon event
+              organized by a local Networking Academy.
+            </p>
+          </article>
+
+          <article class="exp-item">
+            <div class="exp-head">
+              <div>
+                <h3>CISCO Introduction to Cybersecurity</h3>
+                <p>Cisco</p>
+              </div>
+              <span>October 2023</span>
+            </div>
+            <p>
+              Cisco verifies the earner of this badge successfully completed the Introduction to
+              Cybersecurity course. The holder of this student-level credential has introductory
+              knowledge of cybersecurity, including the global implications of cyber threats on
+              industries, and why cybersecurity is a growing profession. They understand vulnerabilities
+              and threat detection and defense. They also have insight into opportunities available with
+              pursuing cybersecurity certifications.
+            </p>
+          </article>
         </div>
-    </section>
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h3><i class="fas fa-shield-alt"></i> Nomad Portfolio</h3>
-                    <p>Securing digital assets through expertise in cybersecurity and ethical hacking.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <p>&copy; 2025 Nomad. All rights reserved.</p>
-                </div>
-            </div>
+        <div class="section-actions center">
+          <a class="btn verify" href="https://www.credly.com/users/n_cv/badges#credly" target="_blank" rel="noreferrer">
+            Verify on Credly
+          </a>
         </div>
+      </section>
+
+      <section id="contact" class="card reveal">
+        <h2>Contact</h2>
+        <p>Open to projects, training, and security testing opportunities.</p>
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:mail.forward.staff@gmail.com">
+            <span class="label">Email</span>
+            <span>mail.forward.staff@gmail.com</span>
+          </a>
+          <a class="contact-card" href="https://github.com/Nom4dx" target="_blank" rel="noreferrer">
+            <span class="label">GitHub</span>
+            <span>github.com/Nom4dx</span>
+          </a>
+          <a class="contact-card" href="https://ctftime.org/team/406718" target="_blank" rel="noreferrer">
+            <span class="label">CTFtime</span>
+            <span>ctftime.org/team/406718</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer reveal">
+      <div>© <span id="year"></span> Nomad. All rights reserved.</div>
     </footer>
+  </div>
 
-    <!-- Back to Top Button -->
-    <a href="#home" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="js/app.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
-
-
-
-
-
